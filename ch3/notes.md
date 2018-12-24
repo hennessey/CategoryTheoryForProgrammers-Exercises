@@ -1,39 +1,32 @@
-# Orders
+# Orders & Free Categories
 ## Pre-order category
-A preorder category is a _thin-category_ where the morphisms
-are reflexive (e.g. `<=`, or more generally can be expressed
-as related to another element) and each
+A preorder is a general, binary relationship that is reflexive and
+transititive. For example, `<=` forms a Pre-order over the
+natural numbers, since:  
+1. `1 <= 1` (reflexive property)
+2. If `1 <= 2` and `2 <= 3` then `1 <= 3` (transitive property)
+
+A _free-category_ can be constructed from a Pre-order. In
+this category, our objects are the elements being ordered,
+and the morphisms their binary, reflexive relationship
+between them.
+This is category since all of the objects have an `identity`
+morphism (via the reflexive property of the binary relation)
+such that `a <= a`, the morphisms between objects are
+composable:
+* If `a ->(<=) b` and `b ->(<=) c` then `a ->(<=) c` 
+
+and that composition is associative:
+1. `f = a <= b`
+2. `g = b <= c`
+3. `h = c <= d`
+3. `h . (g . f) = (h . g) . f` 
+
+A preorder category is also a _thin-category_ since the
 _hom-set_ between morphisms is either empty or a singleton
+as by Pre-order definition, there is only a single
+relation(morphism) between objects.
 
-Pre-orders are a more general equivalence relationship
-
-ex: 
-```
-a <= a
-a <= b
-b <= b
-b <= b
-
-
-composition:
-a <= b
-b <= c 
-
-a <= c
-
-Hom(a, a): {
-    a <= a
-}
-
-Hom(a, b): {
-    a <= b
-}
-
-Hom(b, b): {
-    b <= b
-}
-
-```
 
 ## Partial Order
 A partial order is a pre-order where if a <= b and b <= a
