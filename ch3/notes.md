@@ -29,8 +29,8 @@ relation(morphism) between objects.
 
 
 ## Partial Order
-A partial order is a pre-order where if a <= b and b <= a
-then a = b (anti-symmatry)
+A partial order is a pre-order where if `a <= b` and `b <= a`
+then `a = b` (antisymmetry)
 
 ### Linear/Total Order
 Any two objects in a set are in relation to one another
