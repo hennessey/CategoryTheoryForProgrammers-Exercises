@@ -1,4 +1,4 @@
-# Orders & Free Categories
+# Free Categories
 ## Pre-order category
 A preorder is a general, binary relationship that is reflexive and
 transititive. For example, `<=` forms a Pre-order over the
@@ -32,5 +32,23 @@ relation(morphism) between objects.
 A partial order is a pre-order where if `a <= b` and `b <= a`
 then `a = b` (antisymmetry)
 
-### Linear/Total Order
+## Linear/Total Order
 Any two objects in a set are in relation to one another
+
+## Monoids
+A monoid is an algebraic structure that defines a set of
+elements, an associative binary operation on those elements,
+and an neutral element from the set.
+
+A free category can be constructed from a monoid. For
+example, consider a monoid over the set of Real Numbers,
+addition, and 1 (set, binary operation and neutral element,
+respectively)
+
+Our category has a single object (representing the set of
+Real numbers) and morphisms looping back to it represeting
+each addition operations (`+ 1`, ` + 2`, ...) and their
+compositions: 
+1. `f = + 1`
+2. `g = + 2`
+3. `g . f = + 1 + 2` (`+ 3`)
